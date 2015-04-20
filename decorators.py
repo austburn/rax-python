@@ -1,7 +1,9 @@
 from __future__ import print_function
+from functools import wraps
 
 
 def logged(function):
+    @wraps(function)
     def a_logged_thing():
         print("Starting", function)
         try:
@@ -19,9 +21,9 @@ def hello():
 
 hello()
 """
-Starting <function a_logged_thing at 0x7fe25a42e848>  NASTY!
-Starting <function hello at 0x7fe25a42e7d0>
+Starting <function hello at 0x7fda3b637a28>
+Starting <function hello at 0x7fda3b6379b0>
 Hello!
-Ending <function hello at 0x7fe25a42e7d0>
-Ending <function a_logged_thing at 0x7fe25a42e848>
+Ending <function hello at 0x7fda3b6379b0>
+Ending <function hello at 0x7fda3b637a28>
 """
