@@ -12,13 +12,16 @@ def logged(function):
 
 
 @logged
+@logged
 def hello():
     print("Hello!")
 
 
 hello()
 """
-Starting <function hello at 0x7fbc034b47d0>
+Starting <function a_logged_thing at 0x7fe25a42e848>  NASTY!
+Starting <function hello at 0x7fe25a42e7d0>
 Hello!
-Ending <function hello at 0x7fbc034b47d0>
+Ending <function hello at 0x7fe25a42e7d0>
+Ending <function a_logged_thing at 0x7fe25a42e848>
 """
