@@ -3,12 +3,16 @@
 ## Tooling
 ### Getting your environment set up
 ``` wget https://glyph.im/pip/bootstrap.sh ```
+
 ``` cd ~/Downloads ```
+
 ``` . bootstrap.sh ```
 
 ### Projects
 ``` pip install --editable . # make all local packages available for dev ```
+
 ``` pip wheel . # packages wheel to ~/.wheelhouses/ ```
+
 ``` python setup.py bdist_wheel # for when you have all dependencies installed in your env ```
 
 
