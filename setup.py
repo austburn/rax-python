@@ -15,5 +15,8 @@ setup(
         "console_scripts": [
             "say-hello=entry:some_func"
         ]
+    },
+    package_data = {
+        '': ['*.data']
     }
 )
