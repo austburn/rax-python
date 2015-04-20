@@ -19,13 +19,18 @@ def logged(function):
 @logged
 def hello(world="test"):
     print("Hello!", world)
+    return 3
 
 
-hello(world="Austin")
+print(hello(world="Austin") + 4)
 """
-Starting <function hello at 0x7f4ed1454aa0> () {'world': 'Austin'}
-Starting <function hello at 0x7f4ed1454a28> () {'world': 'Austin'}
+Starting <function hello at 0x7f1509b30a28> () {'world': 'Austin'}
+Starting <function hello at 0x7f1509b309b0> () {'world': 'Austin'}
 Hello! Austin
-Ending <function hello at 0x7f4ed1454a28> () {'world': 'Austin'}
-Ending <function hello at 0x7f4ed1454aa0> () {'world': 'Austin'}
+Ending <function hello at 0x7f1509b309b0> () {'world': 'Austin'}
+Ending <function hello at 0x7f1509b30a28> () {'world': 'Austin'}
+Traceback (most recent call last):
+  File "decorators.py", line 25, in <module>
+    print(hello(world="Austin") + 4)
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
 """
