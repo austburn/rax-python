@@ -17,15 +17,15 @@ def logged(function):
 
 @logged
 @logged
-def hello(world):
+def hello(world="test"):
     print("Hello!", world)
 
 
-hello("Austin")
+hello(world="Austin")
 """
-Starting <function hello at 0x7f28c0752aa0> ('Austin',) {}
-Starting <function hello at 0x7f28c0752a28> ('Austin',) {}
+Starting <function hello at 0x7f4ed1454aa0> () {'world': 'Austin'}
+Starting <function hello at 0x7f4ed1454a28> () {'world': 'Austin'}
 Hello! Austin
-Ending <function hello at 0x7f28c0752a28> ('Austin',) {}
-Ending <function hello at 0x7f28c0752aa0> ('Austin',) {}
+Ending <function hello at 0x7f4ed1454a28> () {'world': 'Austin'}
+Ending <function hello at 0x7f4ed1454aa0> () {'world': 'Austin'}
 """
