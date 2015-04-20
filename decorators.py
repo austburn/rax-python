@@ -8,7 +8,7 @@ def logged(function):
         print("Starting", function,
               args, kwargs)
         try:
-            function(*args, **kwargs)
+            return function(*args, **kwargs)
         finally:
             print("Ending", function,
                   args, kwargs)
@@ -29,8 +29,5 @@ Starting <function hello at 0x7f1509b309b0> () {'world': 'Austin'}
 Hello! Austin
 Ending <function hello at 0x7f1509b309b0> () {'world': 'Austin'}
 Ending <function hello at 0x7f1509b30a28> () {'world': 'Austin'}
-Traceback (most recent call last):
-  File "decorators.py", line 25, in <module>
-    print(hello(world="Austin") + 4)
-TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+7
 """
