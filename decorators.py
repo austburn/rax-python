@@ -11,11 +11,12 @@ def logged(function):
     return a_logged_thing
 
 
+@logged
 def hello():
     print("Hello!")
 
-logged_hello = logged(hello)
-logged_hello()
+
+hello()
 """
 Starting <function hello at 0x7fbc034b47d0>
 Hello!
